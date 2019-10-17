@@ -1,0 +1,23 @@
+server:
+  port: 8088
+spring:
+  profiles:
+    active: dev
+
+---
+
+Person:
+  name: leo
+  age: ${random.int(30)}
+  job: testing engineer（测试开发工程师）
+  habit:
+    - coding
+    - learning
+    - play games
+    - skateBoarding
+    - ${Person.job}
+
+---
+# 日志配置
+logging:
+  path: /SpringbootLog
