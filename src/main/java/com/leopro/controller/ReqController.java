@@ -23,6 +23,11 @@ public class ReqController {
         return "<h1>Congratulations ! This is ur response content!</h1>\n"+person;
     }
 
+    @RequestMapping({"/", "/index"})
+    public String index(){
+        return "index";
+    }
+
     // 返回一个模板页面
     @RequestMapping("/suc")
     public String successPage(){
