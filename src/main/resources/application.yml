@@ -21,3 +21,4 @@ Person:
 # 日志配置
 logging:
   path: /SpringbootLog
+

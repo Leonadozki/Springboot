@@ -28,9 +28,14 @@ public class ReqController {
         return "index";
     }
 
-    // 返回一个模板页面
+    // 返回成功模板页面
     @RequestMapping("/suc")
     public String successPage(){
         return "success";
+    }
+
+    @RequestMapping("/login")
+    public String loginPage(){
+        return "login";
     }
 }
