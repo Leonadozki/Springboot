@@ -23,6 +23,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     // 注册拦截器
     public void addInterceptors(InterceptorRegistry registry){
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/", "/index", "/asserts/**", "/login", "/webjars/**", "/user/login");
+                .excludePathPatterns("/", "/index", "/asserts/**",
+                        "/login", "/webjars/**", "/user/login", "/css/**");
     }
 }

@@ -17,6 +17,8 @@ Person:
     - skateBoarding
     - ${Person.job}
 
+
+
 ---
 # 日志配置
 logging:
