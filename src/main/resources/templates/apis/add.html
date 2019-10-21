@@ -123,36 +123,39 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                        <h2>Section title</h2>
-                        <a type="button" href="#" th:href="@{/api}">添加成员</a>
-                        <thead>
-                        <tr>
-<!--                            <th>#</th>-->
-                            <th>name</th>
-                            <th>age</th>
-                            <th>job</th>
-                            <th>status</th>
-                            <th>habit</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr th:each="person:${persons}">
-                                <td>[[${person.name}]]</td>
-                                <td>[[${person.age}]]</td>
-                                <td>[[${person.job}]]</td>
-                                <td th:text="${person.status}==0?'在职':'已离职' "></td>
-                                <td>[[${person.habit}]]</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <h2>Section title</h2>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="leonadozki">
                 </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Age</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="25">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Job</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="policeman">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">status select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option value="0">在职</option>
+                        <option value="1">离职</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">habit</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </form>
         </main>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-<script src="/static/asserts/js/dashboard.js"></script></body>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="/static/asserts/js/dashboard.js"></script></body>
 </html>
+

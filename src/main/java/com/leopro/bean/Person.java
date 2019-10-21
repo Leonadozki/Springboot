@@ -13,6 +13,7 @@ public class Person {
     private String name;
     private Integer age;
     private String job;
+    private Integer status;
     private List<String> habit;
 
     public String getName() {
@@ -39,6 +40,14 @@ public class Person {
         this.job = job;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     public List<String> getHabit() {
         return habit;
     }
@@ -53,6 +62,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", job='" + job + '\'' +
+                ", status=" + status +
                 ", habit=" + habit +
                 '}';
     }
