@@ -50,7 +50,7 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#" th:href="@{/dashboard}">
                             <span data-feather="home"></span>
                             Dashboard
                         </a>
@@ -124,22 +124,22 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <h2>Section title</h2>
-            <form>
+            <form th:action="@{/apis}" method="post">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="leonadozki">
+                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="leonadozki">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Age</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="25">
+                    <input type="text" name="age" class="form-control" id="exampleFormControlInput2" placeholder="25">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Job</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="policeman">
+                    <input type="text" name="job" class="form-control" id="exampleFormControlInput3" placeholder="policeman">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">status select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="exampleFormControlSelect1" name="status">
                         <option value="0">在职</option>
                         <option value="1">离职</option>
                     </select>
@@ -147,15 +147,18 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">habit</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="habit" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+
+                <input class="btn btn-primary" type="submit" value="提交">
             </form>
         </main>
     </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="/static/asserts/js/dashboard.js"></script></body>
+    <script src="/static/asserts/js/dashboard.js"></script>  </body>
 </html>
 
