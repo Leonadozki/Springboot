@@ -148,7 +148,12 @@
                                 <td>[[${person.habit}]]</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary" href="#" role="button" th:href="@{/api/}+${person.id}">编辑</a>
-                                    <a class="btn btn-sm btn-secondary" href="#" role="button" >删除</a>
+
+                                    <!--    伪删除方法-->
+                                    <form th:action="@{/api/}+${person.id}" method="post">
+                                        <input type="hidden" name="_method" value="delete"/>
+                                        <button class="btn btn-sm btn-secondary" type="submit" >删除</button>
+                                    </form>
                                 </td>
                             </tr>
                         </tbody>

@@ -2,10 +2,8 @@ package com.leopro.controller;
 
 import com.leopro.bean.Person;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
+
 import javax.annotation.Resource;
 import java.util.Map;
 
@@ -54,5 +52,13 @@ public class ApiController {
     public String updateApis(Person person){
         System.out.println(person + "---put请求");
         return "redirect:/apis";
+    }
+
+    // 删除列表数据
+    @DeleteMapping("/api/{id}")
+    public String deleteApis(@PathVariable("id") Integer id, Map<String,Object> map){
+        map.put("msg", "delete方法执行成功");
+        System.out.println("执行了删除id="+id+"操作");
+        return "/apis/list";
     }
 }
