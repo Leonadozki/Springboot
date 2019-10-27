@@ -59,6 +59,6 @@ public class ApiController {
     public String deleteApis(@PathVariable("id") Integer id, Map<String,Object> map){
         map.put("msg", "delete方法执行成功");
         System.out.println("执行了删除id="+id+"操作");
-        return "/apis/list";
+        return "redirect:/apis";
     }
 }
