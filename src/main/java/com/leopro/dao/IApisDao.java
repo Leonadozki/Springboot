@@ -10,26 +10,32 @@ import java.util.List;
  */
 public interface IApisDao {
         /**
-         *  查找所有的问题数据
+         *  查找所有的api
          */
         List<Person> listAllPerson();
 
         /**
-         *  查找单个问题
+         *  查找单个api
          */
         Person getPerson(Integer id);
 
         /**
-         *  保存问题
+         *  保存api
          */
         void savePerson(Person person);
 
-        // 更新问题
+        /**
+         *  更新api
+         */
         void updatePerson(Person person);
 
-        // 删除问题
+        /**
+         *  删除api
+         */
         void deletePerson(Integer id);
 
-        // 通过名称查找数据
+        /**
+         *  通过名称查找api
+         */
         Person getByName(String name);
 }
