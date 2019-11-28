@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@ConfigurationProperties(prefix = "person")
+@ConfigurationProperties(prefix = "person") // 属性跟配置文件中属性做绑定, prefix为绑定配置文件中哪个属性
 public class Person {
     private Integer id;
     private String name;
