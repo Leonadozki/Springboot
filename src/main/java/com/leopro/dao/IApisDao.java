@@ -4,14 +4,24 @@ import com.leopro.bean.Person;
 
 import java.util.List;
 
+/**
+ *  接口dao类管理
+ *  *后期修改为对应接口
+ */
 public interface IApisDao {
-        // 查找所有的问题数据
-        List<Person> findAllPerson();
+        /**
+         *  查找所有的问题数据
+         */
+        List<Person> listAllPerson();
 
-        // 查找单个问题
-        Person findPerson(Integer id);
+        /**
+         *  查找单个问题
+         */
+        Person getPerson(Integer id);
 
-        // 保存问题
+        /**
+         *  保存问题
+         */
         void savePerson(Person person);
 
         // 更新问题
@@ -21,5 +31,5 @@ public interface IApisDao {
         void deletePerson(Integer id);
 
         // 通过名称查找数据
-        Person findByName(String name);
+        Person getByName(String name);
 }
