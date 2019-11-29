@@ -1,5 +1,7 @@
 package com.leopro.controller;
 
+import com.leopro.Mapper.ApiMapper;
+import com.leopro.bean.Api;
 import com.leopro.bean.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +14,23 @@ public class ApiController {
 
     @Resource
     private Person person;
+
+    @Resource
+    Api api;
+
+    @Resource
+    ApiMapper apiMapper;
+
+    /**
+     * @param name
+     * @return 通过名称获取api数据
+     */
+    @GetMapping("/getApi/{name}")
+    @ResponseBody
+    public Api getByName(@PathVariable String name){
+        api = apiMapper.getByName(name);
+        return api;
+    }
 
     @GetMapping("/apis")
     public String apiList(Map<String,Object> map){
