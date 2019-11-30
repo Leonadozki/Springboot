@@ -1,3 +1,4 @@
+# 服务端口、环境配置
 server:
   port: 8088
 spring:
@@ -5,19 +6,10 @@ spring:
     active: dev
 
 ---
-
-Person:
-  id: 1001
-  name: leo
-  age: ${random.int(30)}
-  job: testing engineer（测试开发工程师）
-  status: 0
-  habit:
-    - coding
-    - learning
-    - play games
-    - skateBoarding
-    - ${Person.job}
+# mybatis配置
+mybatis:
+  config-location: classpath:mybatis/mybatisConfig.xml
+  mapper-locations: classpath:mybatis/mappers/*.xml
 
 ---
 # 日志配置
@@ -33,4 +25,18 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/javatest?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
     type: com.alibaba.druid.pool.DruidDataSource
+
+---
+Person:
+  id: 1001
+  name: leo
+  age: ${random.int(30)}
+  job: testing engineer（测试开发工程师）
+  status: 0
+  habit:
+    - coding
+    - learning
+    - play games
+    - skateBoarding
+    - ${Person.job}
 

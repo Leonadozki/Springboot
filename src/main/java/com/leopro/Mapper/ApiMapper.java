@@ -11,5 +11,5 @@ public interface ApiMapper {
      *  通过名称查找Api
      */
     @Select("select * from apis where name=#{name}")
-    public Api getByName(String name);
+    Api getByName(String name);
 }
